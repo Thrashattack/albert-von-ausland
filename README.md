@@ -1,39 +1,68 @@
-# Albert von Ausland
+<h2 align='center'>Albert von Ausland</h2>
 
-![albert-einstein](https://github.com/Thrashattack/albert-von-ausland/assets/23486776/a7ebc286-6959-413b-aabc-a7ba9d9aa016)
+<p align='center'>
+  For those who are not Germans living in Berlin and are tired of not getting an appointment in that place that we all know
+</p>
 
+<p align='center'>
+  <img align='center' src="https://github.com/Thrashattack/albert-von-ausland/assets/23486776/a7ebc286-6959-413b-aabc-a7ba9d9aa016">
+</p>
 
-- For those who are not Germans living in Berlin and are tired of not getting an appointment in that place that we all know
 
 
 ## A nice guy
 
-- It's a bot, still... Can help you to get that (in)famous appointment
+It's a bot, still... Can help you to get that (in)famous appointment
 
+When an appointment is found (No error messages are displayed), it will play a very fun, loud, and nice Brazilian Funk.
 
-- When an appointment is found (No error messages are displayed), it will play a very fun, loud, and nice Brazilian Funk.
-- Please turn your speakers on and let it loud.
+Please turn your speakers on and let it loud.
 
 ## Config (.env)
 
-> RETRY_INTERVAL: Time in milliseconds between each retry
+> RETRY_INTERVAL
 
-> TARGET_URL: The Start page URL (append ?lang=en to make sure it's in english)
+Time in milliseconds between each retry: _5000_
 
-> CITIZENSHIP: Your contry name in english
-> NUMBER_OF_PEOPLE: As it is in the site options (one person)
-> LIVING_ALONE: true or false
-> DESIRED_SERVICE: As it is in the site options (Extend a residence title)
-> PURPOSE: As it is in the site options (Economic activity)
-> TYPE_OF_APPLICATION: As it is in the site options (EU Blue Card / Blaue Karte EU (sect. 18b para. 2))
+> TARGET_URL
 
-> NO_APPOINTMENTS_MESSAGE: The error message displayed when no appoints are found
+The Start page URL (append _?lang=en_ to make sure it's in english)
+
+> CITIZENSHIP
+
+Your contry name in english: _Brazil_
+
+
+> NUMBER_OF_PEOPLE
+
+As it is in the site options: _one person_
+
+> LIVING_ALONE
+
+_true_ or _false_ (The second selector for number of familly members is not implemented. PR's appreciated)
+
+> DESIRED_SERVICE
+
+As it is in the site options: _Extend a residence title_
+
+> PURPOSE
+
+As it is in the site options: _Economic activity_
+
+> TYPE_OF_APPLICATION
+
+As it is in the site options: _EU Blue Card / Blaue Karte EU (sect. 18b para. 2)_
 
 
 ## Install & Run
 
-- yarn install
-- yarn immigration:start
+```bash 
+  yarn install
+```
+
+```bash 
+  yarn immigration:start
+```
 
 ## Dependencies
 
@@ -41,12 +70,16 @@
 
 ### Mac
 
-- brew install vlc
+``` bash
+  brew install vlc
+```
 
 ### Linux (Check your distro package manager)
 
-- sudo snap install vlc
+``` bash
+  sudo snap install vlc
+```
 
 ### Windows
 
-- Download some executable and install it. You should use WSL.
+Download some executable and install it. You should use WSL.
