@@ -7,7 +7,7 @@ import setupDriver from './config/setupDriver.js';
 config();
 const driver = await setupDriver();
 
-searchAppointment(driver);
+await searchAppointment(driver);
 
 console.log('Appointment Found!');
 await playAudioFile('./src/assets/finallyFound.mp3');
