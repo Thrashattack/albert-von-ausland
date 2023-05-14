@@ -1,0 +1,28 @@
+{
+  "name": "albert-von-ausland",
+  "version": "1.0.0",
+  "description": "A Berliner bot, with a noble purpose.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.6.0"
+  },
+  "type": "module",
+  "repository": "https://github.com/Thrashattack/albert-von-ausland",
+  "author": "Carlos Cunha (Thrashattack)",
+  "license": "Unlicense",
+  "private": false,
+  "scripts": {
+    "immigration:start": "node --experimental-modules src/index.js"
+  },
+  "dependencies": {
+    "audic": "^3.0.1",
+    "dotenv": "^16.0.3",
+    "puppeteer": "^20.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-node": "^0.3.7",
+    "eslint-plugin-import": "^2.25.2"
+  }
+}
