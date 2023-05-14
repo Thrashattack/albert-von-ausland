@@ -3,17 +3,15 @@ import wait from '../../helpers/wait.js';
 import xpathContains from '../../helpers/xpathContains.js';
 import timeout from '../../helpers/timeout.js';
 
-const { TYPE_OF_APPLICATION } = process.env;
-
-const typeOfApplication = xpathContains('label', TYPE_OF_APPLICATION);
-const nextButton = xpathContains('button', nextButtonSelector);
-
 const chooseTypeOfApplication = async (driver) => {
-  const typeOfApplicationButton = await driver.getPath(typeOfApplication, timeout);
+  const { TYPE_OF_APPLICATION } = process.env;
+  const typeOfApplication = xpathContains('label', TYPE_OF_APPLICATION);
+  const nextButton = xpathContains('button', nextButtonSelector);
+  const typeOfApplicationButton = await driver.getPath(typeOfApplication, timeout());
   await typeOfApplicationButton.click();
   await wait.sm();
 
-  const nextButtonButton2 = await driver.getPath(nextButton, timeout);
+  const nextButtonButton2 = await driver.getPath(nextButton, timeout());
   await nextButtonButton2.click();
   await driver.waitForNavigation();
   await wait.lg();
