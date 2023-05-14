@@ -12,6 +12,7 @@ const searchAppointment = async (driver) => {
     retries: 0,
     noSlotsAvailable: true,
   };
+
   while (state.noSlotsAvailable) {
     await bookAppointment(driver);
     await acceptTermsAndConditions(driver);
