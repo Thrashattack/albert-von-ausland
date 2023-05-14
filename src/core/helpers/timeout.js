@@ -1,7 +1,8 @@
-const {
-  RETRY_INTERVAL,
-} = process.env;
-
-export default {
-  timeout: RETRY_INTERVAL ?? 5000,
+export default () => {
+  const {
+    RETRY_INTERVAL,
+  } = process.env;
+  return {
+    timeout: RETRY_INTERVAL ?? 5000,
+  };
 };
