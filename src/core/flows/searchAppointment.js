@@ -6,6 +6,7 @@ import chooseDesiredService from '../steps/searchAppointment/chooseDesiredServic
 import choosePurpose from '../steps/searchAppointment/choosePurpose.js';
 import chooseTypeOfApplication from '../steps/searchAppointment/chooseTypeOfApplication.js';
 import checkSlotsAvailable from '../steps/searchAppointment/checkSlotsAvailable.js';
+import chooseIsLivingAlone from '../steps/searchAppointment/chooseIsLivingAlone.js';
 
 const searchAppointment = async (driver) => {
   const state = {
@@ -18,6 +19,7 @@ const searchAppointment = async (driver) => {
     await acceptTermsAndConditions(driver);
     await chooseCitizenship(driver);
     await chooseNumberOfPeople(driver);
+    await chooseIsLivingAlone(driver);
     await chooseDesiredService(driver);
     await choosePurpose(driver);
     await chooseTypeOfApplication(driver);
