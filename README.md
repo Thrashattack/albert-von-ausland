@@ -14,7 +14,7 @@
 
 It's a bot, still... Can help you to get that (in)famous appointment
 
-When an appointment is found (No error messages are displayed), it will play a very fun, loud, and nice Brazilian Funk.
+When an appointment is found (No error messages are displayed), it will play a very fun, <b>loud<b>, and nice [Brazilian Funk](https://youtu.be/33_V64bI1NY?t=47).
 
 Please turn your speakers on and let it loud.
 
@@ -56,11 +56,11 @@ As it is in the site options: _EU Blue Card / Blaue Karte EU (sect. 18b para. 2)
 
 ## Install & Run
 
-```bash 
+```bash
   yarn install
 ```
 
-```bash 
+```bash
   yarn immigration:start
 ```
 
