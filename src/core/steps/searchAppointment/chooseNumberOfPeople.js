@@ -7,8 +7,8 @@ const chooseNumberOfPeople = async (driver) => {
   const numberOfPeopleButton = await driver.getPath(numberOfPeopleSelector, timeout());
   await numberOfPeopleButton.click();
   numberOfPeopleButton.type(NUMBER_OF_PEOPLE);
-  await numberOfPeopleButton.type('Enter');
-  await wait.xs();
+  await driver.keyboard.press('Enter');
+  await wait.sm();
 };
 
 export default chooseNumberOfPeople;

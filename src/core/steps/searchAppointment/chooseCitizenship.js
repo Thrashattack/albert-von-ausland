@@ -7,8 +7,8 @@ const chooseCitizenship = async (driver) => {
   const citizenshipButton = await driver.getPath(citizenshipSelector, timeout());
   await citizenshipButton.click();
   await citizenshipButton.type(CITIZENSHIP);
-  await citizenshipButton.type('Enter');
-  await wait.xs();
+  await driver.keyboard.press('Enter');
+  await wait.sm();
 };
 
 export default chooseCitizenship;
