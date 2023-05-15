@@ -7,7 +7,7 @@ const acceptTermsAndConditions = async (driver) => {
   const nextButtonPath = xpathContains('button', nextButtonSelector);
   const acceptTermsCheckbox = await driver.get(acceptTermsSelector, timeout());
   const nextButton = await driver.getPath(nextButtonPath, timeout());
-
+  await wait.lg();
   await acceptTermsCheckbox.click();
   await nextButton.click();
   await driver.waitForNavigation();

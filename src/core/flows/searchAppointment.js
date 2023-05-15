@@ -30,7 +30,8 @@ const searchAppointment = async (driver, newPage) => {
       console.log(`No slots available. Retrying... (${state.retries})`);
     } catch (error) {
       state.retries += 1;
-      state.page = newPage();
+      await state.page.browser().close();
+      state.page = await newPage();
       console.log(error);
     }
   }
