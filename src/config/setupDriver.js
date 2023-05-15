@@ -13,6 +13,9 @@ const setupDriver = async () => {
       '--disable-blink-features=AutomationControlled',
       '--disable-infobars',
       '--disable-extensions',
+      '--disable-background-timer-throttling',
+      '--disable-backgrounding-occluded-windows',
+      '--disable-renderer-backgrounding',
     ],
     ignoreDefaultArgs: ['--enable-automation'],
   });
@@ -49,6 +52,10 @@ const setupDriver = async () => {
 
   page.get = page.waitForSelector;
   page.getPath = page.waitForXPath;
+
+  page.on('dialog', async (dialog) => {
+    await dialog.accept();
+  });
 
   return page;
 };

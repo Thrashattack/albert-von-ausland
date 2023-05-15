@@ -11,7 +11,7 @@ const acceptTermsAndConditions = async (driver) => {
   await acceptTermsCheckbox.click();
   await nextButton.click();
   await driver.waitForNavigation();
-  await wait.sm();
+  await wait.md();
 };
 
 export default acceptTermsAndConditions;

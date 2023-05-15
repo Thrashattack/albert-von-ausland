@@ -8,26 +8,34 @@ import chooseTypeOfApplication from '../steps/searchAppointment/chooseTypeOfAppl
 import checkSlotsAvailable from '../steps/searchAppointment/checkSlotsAvailable.js';
 import chooseIsLivingAlone from '../steps/searchAppointment/chooseIsLivingAlone.js';
 
-const searchAppointment = async (driver) => {
+const searchAppointment = async (driver, newPage) => {
   const state = {
     retries: 0,
     noSlotsAvailable: true,
+    page: driver,
   };
 
   while (state.noSlotsAvailable) {
-    await bookAppointment(driver);
-    await acceptTermsAndConditions(driver);
-    await chooseCitizenship(driver);
-    await chooseNumberOfPeople(driver);
-    await chooseIsLivingAlone(driver);
-    await chooseDesiredService(driver);
-    await choosePurpose(driver);
-    await chooseTypeOfApplication(driver);
-
-    state.noSlotsAvailable = await checkSlotsAvailable(driver);
-    state.retries += 1;
-    console.log(`No slots available. Retrying... (${state.retries})`);
+    try {
+      await bookAppointment(state.page);
+      await acceptTermsAndConditions(state.page);
+      await chooseCitizenship(state.page);
+      await chooseNumberOfPeople(state.page);
+      await chooseIsLivingAlone(state.page);
+      await chooseDesiredService(state.page);
+      await choosePurpose(state.page);
+      await chooseTypeOfApplication(state.page);
+      state.noSlotsAvailable = await checkSlotsAvailable(state.page);
+      state.retries += 1;
+      console.log(`No slots available. Retrying... (${state.retries})`);
+    } catch (error) {
+      state.retries += 1;
+      state.page = newPage();
+      console.log(error);
+    }
   }
+
+  return state;
 };
 
 export default searchAppointment;

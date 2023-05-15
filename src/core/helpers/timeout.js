@@ -3,6 +3,6 @@ export default () => {
     RETRY_INTERVAL,
   } = process.env;
   return {
-    timeout: RETRY_INTERVAL ?? 5000,
+    timeout: RETRY_INTERVAL ?? 30000,
   };
 };
