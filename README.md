@@ -20,6 +20,8 @@ Please turn your speakers on and let it loud.
 
 ## Config (.env)
 
+- Create a file called `.env` in the project directory and set up the values below (see .env.example)
+
 > RETRY_INTERVAL
 
 Time in milliseconds between each retry: _5000_
@@ -85,10 +87,7 @@ As it is in the site options: _EU Blue Card / Blaue Karte EU (sect. 18b para. 2)
 Download some executable and install it. You should use WSL.
 
 
-Demo: 
+Demo:
 
 
 https://github.com/Thrashattack/albert-von-ausland/assets/23486776/e931a75c-a590-4e0f-99df-b07c54dc3a35
-
-
-
