@@ -5,7 +5,7 @@ import chooseNumberOfPeople from '../steps/searchAppointment/chooseNumberOfPeopl
 import chooseDesiredService from '../steps/searchAppointment/chooseDesiredService.js';
 import choosePurpose from '../steps/searchAppointment/choosePurpose.js';
 import chooseTypeOfApplication from '../steps/searchAppointment/chooseTypeOfApplication.js';
-import checkSlotsAvailable from '../steps/searchAppointment/checkSlotsAvailable.js';
+import checkIsSecondStep from '../steps/searchAppointment/checkIsSecondStep.js';
 import chooseIsLivingAlone from '../steps/searchAppointment/chooseIsLivingAlone.js';
 
 const searchAppointment = async (driver, newPage) => {
@@ -25,7 +25,7 @@ const searchAppointment = async (driver, newPage) => {
       await chooseDesiredService(state.page);
       await choosePurpose(state.page);
       await chooseTypeOfApplication(state.page);
-      state.noSlotsAvailable = await checkSlotsAvailable(state.page);
+      state.noSlotsAvailable = await checkIsSecondStep(state.page);
       state.retries += 1;
       console.log(`No slots available. Retrying... (${state.retries})`);
     } catch (error) {

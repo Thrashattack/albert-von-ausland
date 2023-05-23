@@ -6,4 +6,4 @@ export const citizenshipSelector = '//*[@id="xi-sel-400"]';
 export const numberOfPeopleSelector = '//*[@id="xi-sel-422"]';
 export const livingAloneSelector = '//*[@id="xi-sel-427"]';
 
-export const errorSelector = '//*[@id="messagesBox"]/ul/li';
+export const serviceSelectionTab = '#main > div.clearfix.antcl_content > div.contentContainer > div.formContainer.antcl_wizard > div > div.antcl_wizardSteps.dynamic > ul > li.antcl_active > span';
